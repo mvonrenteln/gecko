@@ -4,4 +4,7 @@ node_modules
 .idea/
 .env
 /private_samples/
-/build/
+/build/app/frontend/node_modules
+app/frontend/.next
+app/frontend/playwright-report
+app/frontend/test-results

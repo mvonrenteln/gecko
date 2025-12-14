@@ -92,3 +92,16 @@ See [this page](CONTRIBUTING.md).
 ## Contact
 
 For help and feedback, please feel free to contact [the team at Gong.io](https://github.com/gong-io).
+
+## Frontend-Neustart (React/Next)
+
+Eine neue App-Shell auf Basis von Next.js befindet sich unter `app/frontend` und läuft parallel zur AngularJS-Anwendung.
+
+```bash
+cd app/frontend
+npm install
+npm run dev
+```
+
+*SSR* wird z.B. auf `/audio` genutzt, *ISR* via `getStaticProps` auf der Startseite. Tailwind CSS ist für neue Module aktiv,
+während `static/css/app.css` über ein Global-Import für die Übergangsphase verfügbar bleibt.
