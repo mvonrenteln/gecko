@@ -10,7 +10,12 @@
     "dev": "webpack serve --config webpack.config.js --mode=development --progress",
     "build": "webpack",
     "server": "node index_server.js",
-    "deploy": "webpack && git subtree push --prefix build origin gh-pages"
+    "deploy": "webpack && git subtree push --prefix build origin gh-pages",
+    "frontend:dev": "npm --prefix app/frontend run dev",
+    "frontend:build": "npm --prefix app/frontend run build",
+    "frontend:lint": "npm --prefix app/frontend run lint",
+    "frontend:type-check": "npm --prefix app/frontend run type-check",
+    "frontend:test:e2e": "npm --prefix app/frontend run test:e2e"
   },
   "author": "",
   "license": "ISC",
