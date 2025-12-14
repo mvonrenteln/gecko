@@ -1,4 +1,10 @@
 node_modules
+app/frontend/node_modules
+app/frontend/.next
+app/frontend/.turbo
+app/frontend/.playwright-cache
+app/frontend/test-results
+app/frontend/tsconfig.tsbuildinfo
 *.pyc
 *.db
 .idea/

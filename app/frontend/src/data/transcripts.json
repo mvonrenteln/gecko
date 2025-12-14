@@ -1,0 +1,38 @@
+[
+  {
+    "id": "alpha",
+    "title": "Discovery Call",
+    "description": "Team spricht über einen neuen Datensatz.",
+    "audioUrl": "https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3",
+    "updatedAt": "2024-12-03T10:00:00Z",
+    "segments": [
+      {
+        "start": 0,
+        "end": 4.2,
+        "speaker": "Alice",
+        "text": "Hallo zusammen, ich habe die Audiodatei geladen."
+      },
+      {
+        "start": 4.3,
+        "end": 9.8,
+        "speaker": "Bob",
+        "text": "Lasst uns die Transkription gegen die neue Version prüfen."
+      }
+    ]
+  },
+  {
+    "id": "beta",
+    "title": "User Research",
+    "description": "Interview Zusammenfassung",
+    "audioUrl": "https://interactive-examples.mdn.mozilla.net/media/examples/t-rex-roar.mp3",
+    "updatedAt": "2024-11-28T12:00:00Z",
+    "segments": [
+      {
+        "start": 0,
+        "end": 6.1,
+        "speaker": "Researcher",
+        "text": "Bitte beschreiben Sie Ihren Workflow."
+      }
+    ]
+  }
+]
