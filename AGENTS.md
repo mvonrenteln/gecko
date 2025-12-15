@@ -6,3 +6,4 @@
   - `app/frontend/src/app/fonts/GeistMonoVF.woff`
   - `app/frontend/src/app/fonts/GeistVF.woff`
   These files must remain unchanged and only be referenced as-is.
+- Keep comments, test data, and Markdown content written in English.

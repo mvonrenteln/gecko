@@ -18,7 +18,7 @@ describe('TranscriptEditor', () => {
   });
 
   it('saves edited text and updates the store', async () => {
-    const updatedText = 'Aktualisierte Zeile für den Speichern-Flow';
+    const updatedText = 'Updated line for the save flow';
     const user = userEvent.setup();
     const saveSpy = vi
       .spyOn(transcriptService, 'saveTranscript')
