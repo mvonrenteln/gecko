@@ -15,8 +15,11 @@ export default defineConfig({
     }
   ],
   webServer: {
-    command: 'npm run dev',
+    command: 'npm run build && npm run start -- --hostname 0.0.0.0 --port 3000',
     url: 'http://127.0.0.1:3000',
-    reuseExistingServer: !process.env.CI
+    reuseExistingServer: !process.env.CI,
+    env: {
+      NEXT_TELEMETRY_DISABLED: '1'
+    }
   }
 });
