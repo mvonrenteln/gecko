@@ -1,0 +1,38 @@
+image: mcr.microsoft.com/playwright:v1.44.1-jammy
+
+stages:
+  - test
+
+variables:
+  PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
+  NEXT_TELEMETRY_DISABLED: '1'
+  CI: 'true'
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - app/frontend/node_modules/
+
+before_script:
+  - cd app/frontend
+  - npm ci
+
+unit_tests:
+  stage: test
+  script:
+    - npm run lint
+    - npm run type-check
+    - npm run test:unit
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event" || $CI_COMMIT_BRANCH'
+
+e2e_tests:
+  stage: test
+  needs:
+    - unit_tests
+  script:
+    - npm run test:e2e
+  variables:
+    NODE_ENV: test
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event" || $CI_COMMIT_BRANCH'
