@@ -25,17 +25,17 @@ export default function Home({ records }: HomeProps) {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <TranscriptList transcripts={records} />
         <section className="gecko-panel p-4 space-y-3">
-          <h2 className="text-xl font-semibold">SSR/ISR aktiv</h2>
+          <h2 className="text-xl font-semibold">SSR/ISR enabled</h2>
           <p className="text-slate-300 text-sm">
-            Die Startseite wird per Static Generation bereitgestellt und alle 60 Sekunden invalidiert (ISR). Sie kann via Proxy
-            parallel zum AngularJS-Frontend laufen und nutzt bereits den neuen State-Store.
+            The landing page is statically generated and revalidated every 60 seconds (ISR). It can run alongside the AngularJS
+            frontend via a proxy and already uses the new state store.
           </p>
           <div className="rounded border border-slate-800 p-3 bg-slate-900/60">
-            <p className="text-sm text-slate-200">Services getrennt:</p>
+            <p className="text-sm text-slate-200">Services split up:</p>
             <ul className="list-disc list-inside text-sm text-slate-400 space-y-1">
-              <li>State-Store (Zustand) für UI- und Audio-Status</li>
-              <li>Audio-Service entkoppelt das Laden/Play</li>
-              <li>Transcript-Service liefert Daten und Export</li>
+              <li>State store (Zustand) for UI and audio status</li>
+              <li>Audio service decouples loading and playback</li>
+              <li>Transcript service provides data and export</li>
             </ul>
           </div>
         </section>

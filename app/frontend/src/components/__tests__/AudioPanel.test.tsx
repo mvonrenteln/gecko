@@ -11,7 +11,7 @@ describe('AudioPanel', () => {
     render(<AudioPanel src={AUDIO_SRC} />);
 
     expect(screen.getByText(AUDIO_SRC)).toBeInTheDocument();
-    await waitFor(() => expect(screen.getByText('geladen')).toBeInTheDocument());
+    await waitFor(() => expect(screen.getByText('loaded')).toBeInTheDocument());
 
     const toggle = screen.getByTestId('toggle-audio');
     expect(toggle).toHaveTextContent('Play');

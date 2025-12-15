@@ -7,7 +7,7 @@ describe('TranscriptList', () => {
   it('lists available transcripts with links', () => {
     render(<TranscriptList transcripts={transcripts} />);
 
-    const openLinks = screen.getAllByRole('link', { name: 'Öffnen' });
+    const openLinks = screen.getAllByRole('link', { name: 'Open' });
 
     transcripts.forEach((entry, index) => {
       expect(screen.getByText(entry.title)).toBeInTheDocument();
