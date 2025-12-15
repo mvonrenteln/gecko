@@ -21,7 +21,8 @@
       "@/services/*": ["src/services/*"],
       "@/state/*": ["src/state/*"],
       "@/models/*": ["src/models/*"],
-      "@/data/*": ["src/data/*"]
+      "@/data/*": ["src/data/*"],
+      "@/tests/*": ["src/tests/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
